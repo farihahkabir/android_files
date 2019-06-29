@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity {
     Button btnMinus;
     Button btnMult;
     Button btnDiv;
-    int result;
-    int firstNum;
-    int secondNum;
+    float result;
+    float firstNum;
+    float secondNum;
     String operator;
     String temp;
 
