@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity {
         switch(view.getId()) {
             case R.id.btn0:
                 temp = temp + (btn0.getText().toString());
-
                 textView.setText(temp);
                 break;
             case R.id.btn1:
@@ -102,21 +101,15 @@ public class MainActivity extends AppCompatActivity {
                 temp = temp + (btn9.getText().toString());
                 textView.setText(temp);
                 break;
-            case R.id.btnClear:
-                temp = "0";
-                textView.setText(temp);
-                break;
         }
-
     }
 
-//    public void onClickClear(View view) {
-//        int result = Integer.parseInt(textView.getText().toString());
-//        if(view.getId() == R.id.btnClear){
-//            result = 0;
-//            textView.setText(result + "");
-//        }
-//    }
+    public void onClickClear(View view) {
+        if(view.getId() == R.id.btnClear){
+            temp = "";
+            textView.setText(temp);
+        }
+    }
 
     public void onClickOperator(View view) {
         switch (view.getId()){
