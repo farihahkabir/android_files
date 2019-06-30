@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn7;
     Button btn8;
     Button btn9;
+    Button btndecimal;
     Button btnClear;
     Button btnEqual;
     Button btnPlus;
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btn7 = findViewById(R.id.btn7);
         btn8 = findViewById(R.id.btn8);
         btn9 = findViewById(R.id.btn9);
+        btndecimal = findViewById(R.id.btndecimal);
 
         btnClear = findViewById(R.id.btnClear);
         btnEqual = findViewById(R.id.btnEqual);
@@ -101,6 +103,10 @@ public class MainActivity extends AppCompatActivity {
                 temp = temp + (btn9.getText().toString());
                 textView.setText(temp);
                 break;
+            case R.id.btndecimal:
+                temp = temp + (btndecimal.getText().toString());
+                textView.setText(temp);
+                break;
         }
     }
 
@@ -115,50 +121,58 @@ public class MainActivity extends AppCompatActivity {
         switch (view.getId()){
             case R.id.btnPlus:
                 operator = "+";
-                firstNum = Integer.parseInt(temp);
+                firstNum = Float.parseFloat(temp);
                 temp = "";
                 textView.setText(temp);
                 break;
             case R.id.btnMinus:
                 operator = "-";
-                firstNum = Integer.parseInt(temp);
+                firstNum = Float.parseFloat(temp);
                 temp = "";
                 textView.setText(temp);
                 break;
             case R.id.btnMult:
                 operator = "*";
-                firstNum = Integer.parseInt(temp);
+                firstNum = Float.parseFloat(temp);
                 temp = "";
                 textView.setText(temp);
                 break;
             case R.id.btnDiv:
                 operator = "/";
-                firstNum = Integer.parseInt(temp);
+                firstNum = Float.parseFloat(temp);
                 temp = "";
                 textView.setText(temp);
                 break;
-
         }
     }
 
     public void onClickEqual(View view) {
         if(view.getId() == R.id.btnEqual){
-            secondNum = Integer.parseInt(temp);
+            secondNum = Float.parseFloat(temp);
             if(operator == "+"){
                 result = firstNum + secondNum;
+                temp = Float.toString(result);
                 textView.setText(result + "");
             }
             else if(operator == "-"){
                 result = firstNum - secondNum;
+                temp = Float.toString(result);
                 textView.setText(result + "");
             }
             else if(operator == "*"){
                 result = firstNum * secondNum;
+                temp = Float.toString(result);
                 textView.setText(result + "");
             }
             else if(operator == "/"){
-                result = firstNum / secondNum;
-                textView.setText(result + "");
+                if(secondNum == 0){
+                    textView.setText("Math Error");
+                }
+                else{
+                    result = firstNum / secondNum;
+                    temp = Float.toString(result);
+                    textView.setText(result + "");
+                }
             }
         }
     }
