@@ -11,11 +11,10 @@
         android:id="@+id/addcity"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:src="@drawable/next_icon"
-        android:layout_marginLeft="70dp"
+        android:src="@drawable/previous_icon"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_toRightOf="@+id/sunnyicon"
-        android:onClick="onClickNext" />
+        android:onClick="onClickPrev" />
 
     <ImageView
         android:id="@+id/sunnyicon"
@@ -23,12 +22,12 @@
         android:layout_height="115dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="120dp"
-        android:src="@drawable/sunny_icon"  />
+        android:src="@drawable/cloudy_icon"  />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/place"
+        android:id="@+id/placemv"
         android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"
@@ -38,18 +37,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/description"
+        android:id="@+id/descriptionmv"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:textSize="25sp"
-        android:layout_below ="@id/place" />
+        android:layout_below ="@id/placemv" />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/lonlat"
-        android:layout_below="@id/description"
+        android:id="@+id/lonlatmv"
+        android:layout_below="@id/descriptionmv"
         android:weightSum="2"
         android:layout_marginTop="40dp"
         android:orientation="horizontal">
@@ -71,7 +70,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/lat"
+                android:id="@+id/latmv"
                 android:textSize="30sp"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center" />
@@ -94,18 +93,18 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/lon"
+                android:id="@+id/lonmv"
                 android:textSize="30sp"
                 android:layout_marginTop="10dp"
                 android:layout_gravity="center" />
         </LinearLayout>
 
     </LinearLayout>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/lonlat"
+        android:layout_below="@id/lonlatmv"
         android:weightSum="3"
         android:orientation="horizontal"
         android:layout_marginTop="40dp" >
@@ -127,7 +126,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/temp"
+                android:id="@+id/tempmv"
                 android:layout_marginTop="20dp"
                 android:textSize="25sp"
                 android:layout_gravity="center" />
@@ -150,7 +149,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/humidity"
+                android:id="@+id/humiditymv"
                 android:layout_marginTop="20dp"
                 android:textSize="25sp"
                 android:layout_gravity="center" />
@@ -173,7 +172,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/speed"
+                android:id="@+id/speedmv"
                 android:layout_marginTop="20dp"
                 android:textSize="25sp"
                 android:layout_gravity="center" />

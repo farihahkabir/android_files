@@ -11,10 +11,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DecimalFormat;
 
 
 public class Weather extends AsyncTask<String, Void, String> {
     String result;
+    Float tempC;
+    DecimalFormat tempCFormat = new DecimalFormat("#.00");
 
     @Override
     protected String doInBackground(String... urls) {
@@ -61,9 +64,12 @@ public class Weather extends AsyncTask<String, Void, String> {
             String longitude = coord.getString("lon");
             String latitude = coord.getString("lat");
 
+            tempC = Float.parseFloat(temperature);
+            tempC = tempC - 273;
+
             MainActivity.place.setText(placeName);
             MainActivity.description.setText(desc);
-            MainActivity.temp.setText(temperature + "K");
+            MainActivity.temp.setText(tempCFormat.format(tempC)+ "" + "°C");
             MainActivity.humidity.setText(hum + "%");
             MainActivity.speed.setText(windspeed + "km/hr");
             MainActivity.lon.setText(longitude + "° E");
