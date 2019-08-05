@@ -37,45 +37,45 @@ public class DataActivity extends AppCompatActivity {
         final DatabaseHelper helper = new DatabaseHelper(this);
         final ArrayList array_list = helper.getAllInfo();
 
-        name = findViewById(R.id.nameField);
-        aqi = findViewById(R.id.aqi);
-        gmt = findViewById(R.id.aqi);
-        lat = findViewById(R.id.aqi);
-        longitude = findViewById(R.id.aqi);
-        co = findViewById(R.id.aqi);
-        no2 = findViewById(R.id.aqi);
-        o3 = findViewById(R.id.aqi);
-        so2 = findViewById(R.id.aqi);
-        listView = findViewById(R.id.listView);
-
-        final ArrayAdapter arrayAdapter = new ArrayAdapter(DataActivity.this, android.R.layout.simple_list_item_1, array_list);
-        listView.setAdapter(arrayAdapter);
-
-        findViewById(R.id.viewAllBtn).setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                array_list.clear();
-                array_list.addAll(helper.getAllInfo());
-                arrayAdapter.notifyDataSetChanged();
-                listView.invalidateViews();
-                listView.refreshDrawableState();
-            }
-        });
-
-        findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                if(!name.getText().toString().isEmpty()  && !aqi.getText().toString().isEmpty()){
-                    if (helper.insert(name.getText().toString(), aqi.getText().toString())){
-                        Toast.makeText(DataActivity.this, "Inserted", Toast.LENGTH_LONG).show();
-                    } else {
-                        Toast.makeText(DataActivity.this, "Not Inserted",  Toast.LENGTH_LONG).show();
-                    }
-                } else {
-                    name.setError("Enter  Name");
-                    aqi.setError("Enter AQI");
-                }
-            }
-        });
+//        name = findViewById(R.id.nameField);
+//        aqi = findViewById(R.id.aqi);
+//        gmt = findViewById(R.id.aqi);
+//        lat = findViewById(R.id.aqi);
+//        longitude = findViewById(R.id.aqi);
+//        co = findViewById(R.id.aqi);
+//        no2 = findViewById(R.id.aqi);
+//        o3 = findViewById(R.id.aqi);
+//        so2 = findViewById(R.id.aqi);
+//        listView = findViewById(R.id.listView);
+//
+//        final ArrayAdapter arrayAdapter = new ArrayAdapter(DataActivity.this, android.R.layout.simple_list_item_1, array_list);
+//        listView.setAdapter(arrayAdapter);
+//
+//        findViewById(R.id.viewAllBtn).setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                array_list.clear();
+//                array_list.addAll(helper.getAllInfo());
+//                arrayAdapter.notifyDataSetChanged();
+//                listView.invalidateViews();
+//                listView.refreshDrawableState();
+//            }
+//        });
+//
+//        findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View v) {
+//                if(!name.getText().toString().isEmpty()  && !aqi.getText().toString().isEmpty()){
+//                    if (helper.insert(name.getText().toString(), aqi.getText().toString())){
+//                        Toast.makeText(DataActivity.this, "Inserted", Toast.LENGTH_LONG).show();
+//                    } else {
+//                        Toast.makeText(DataActivity.this, "Not Inserted",  Toast.LENGTH_LONG).show();
+//                    }
+//                } else {
+//                    name.setError("Enter  Name");
+//                    aqi.setError("Enter AQI");
+//                }
+//            }
+//        });
     }
 }
