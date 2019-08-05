@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +24,13 @@ public class DataActivity extends AppCompatActivity {
 //Idea: Use the menu options to retrieve the location and feed that in the citymenu variable
         aqi = (TextView) findViewById(R.id.aqi);
 
+        //drop down menu is called spinner
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(DataActivity.this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.cities));
+        myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //to allow adapter to show our spinner
+        spinner.setAdapter(myAdapter);
+
         APIActivity getData = new  APIActivity();
         getData.execute("https://api.waqi.info/feed/" + cityMenu + "/?token=dde58930fe41788aa121c1a177000a9b49af7ed9");
 
@@ -40,7 +48,7 @@ public class DataActivity extends AppCompatActivity {
         so2 = findViewById(R.id.aqi);
         listView = findViewById(R.id.listView);
 
-        final ArrayAdapter arrayAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, array_list);
+        final ArrayAdapter arrayAdapter = new ArrayAdapter(DataActivity.this, android.R.layout.simple_list_item_1, array_list);
         listView.setAdapter(arrayAdapter);
 
         findViewById(R.id.viewAllBtn).setOnClickListener(new View.OnClickListener(){
@@ -54,20 +62,20 @@ public class DataActivity extends AppCompatActivity {
             }
         });
 
-//        findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View v) {
-//                if(!name.getText().toString().isEmpty()  && !aqi.getText().toString().isEmpty()){
-//                    if (helper.insert(name.getText().toString(), aqi.getText().toString())){
-//                        Toast.makeText(DataActivity.this, "Inserted", Toast.LENGTH_LONG).show();
-//                    } else {
-//                        Toast.makeText(DataActivity.this, "Not Inserted",  Toast.LENGTH_LONG).show();
-//                    }
-//                } else {
-//                    name.setError("Enter  Name");
-//                    aqi.setError("Enter AQI");
-//                }
-//            }
-//        });
+        findViewById(R.id.saveBtn).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                if(!name.getText().toString().isEmpty()  && !aqi.getText().toString().isEmpty()){
+                    if (helper.insert(name.getText().toString(), aqi.getText().toString())){
+                        Toast.makeText(DataActivity.this, "Inserted", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(DataActivity.this, "Not Inserted",  Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    name.setError("Enter  Name");
+                    aqi.setError("Enter AQI");
+                }
+            }
+        });
     }
 }
