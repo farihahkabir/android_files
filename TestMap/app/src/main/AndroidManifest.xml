@@ -54,6 +54,9 @@
         <activity android:name=".DataActivity"
             android:label="Data"></activity>
 
+        <activity android:name=".AboutUsActivity2"
+            android:label="About Us"></activity>
+
     </application>
 
 </manifest>

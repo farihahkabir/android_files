@@ -5,16 +5,17 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class AboutUsActivity extends AppCompatActivity {
+public class AboutUsActivity2  extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aboutus);
-
+        setContentView(R.layout.activity_aboutus2);
     }
 
-    public void onClickImage (View view){
-        Intent intent = new Intent(this, AboutUsActivity2.class);
+    public void onClickImage(View view) {
+        Intent intent = new Intent(this, AboutUsActivity.class);
         startActivity(intent);
     }
+
 }
