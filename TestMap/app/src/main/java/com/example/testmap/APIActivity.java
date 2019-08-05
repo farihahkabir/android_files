@@ -68,6 +68,7 @@ public class APIActivity extends AsyncTask<String, Void, String> {
             String vso2 = so2.getString("v");
 
             //Set displays
+            DataActivity.aqi.setText("AQI: " + aqi);
         }catch (JSONException e){
             e.printStackTrace();
         }
