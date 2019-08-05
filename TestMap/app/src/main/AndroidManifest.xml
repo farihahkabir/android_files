@@ -32,12 +32,28 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:label="Welcome to Enviro-Map">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".AboutUsActivity"
+            android:label="About Us"></activity>
+
+        <activity android:name=".ContactUsActivity"
+            android:label="Contact Us"></activity>
+
+        <activity android:name=".DataActivity"
+            android:label="Data"></activity>
+
     </application>
 
 </manifest>
