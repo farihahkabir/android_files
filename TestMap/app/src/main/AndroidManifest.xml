@@ -57,7 +57,8 @@
         <activity android:name=".AboutUsActivity2"
             android:label="About Us"></activity>
 
-        <activity android:name=".ListActivity"></activity>
+        <activity android:name=".ListActivity"
+            android:label="Data Viewer"></activity>
 
     </application>
 
