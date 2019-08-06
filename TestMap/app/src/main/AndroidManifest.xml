@@ -52,10 +52,12 @@
             android:label="Contact Us"></activity>
 
         <activity android:name=".DataActivity"
-            android:label="Data"></activity>
+            android:label="Data Viewer"></activity>
 
         <activity android:name=".AboutUsActivity2"
             android:label="About Us"></activity>
+
+        <activity android:name=".ListActivity"></activity>
 
     </application>
 
