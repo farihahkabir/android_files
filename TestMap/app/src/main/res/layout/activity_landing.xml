@@ -4,6 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/map_back"
     tools:context=".MainActivity">
 
     <RelativeLayout
@@ -25,6 +26,7 @@
             android:layout_width="400dp"
             android:layout_height="50dp"
             android:id="@+id/subTitle"
+            android:textStyle="bold"
             android:layout_below="@+id/title"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="19sp"
@@ -40,6 +42,7 @@
             android:layout_below="@+id/subTitle"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="40dp"
+            android:textStyle="bold"
             android:textSize="23sp"
             android:textAlignment="center"
             android:text="Our Main Objective is to Provide Location based environment data to researchers/students."/>
@@ -50,34 +53,21 @@
             android:layout_height="55dp"
             android:layout_below="@+id/welcomeMessage"
             android:text="Map"
+            android:layout_marginLeft="100dp"
+            android:background="@color/grey"
             android:onClick="onClickMap"/>
 
         <Button
             android:id="@+id/btnData"
             android:layout_width="100dp"
             android:layout_height="55dp"
+            android:background="@color/grey"
             android:layout_toRightOf="@+id/btnMap"
             android:layout_below="@+id/welcomeMessage"
             android:text="Data"
-            android:onClick="onClickData"/> />
+            android:layout_marginLeft="10dp"
+            android:onClick="onClickData"/>
 
-        <Button
-            android:id="@+id/btnAbout"
-            android:layout_width="100dp"
-            android:layout_height="55dp"
-            android:layout_below="@+id/welcomeMessage"
-            android:layout_toRightOf="@+id/btnData"
-            android:text="About Us"
-            android:onClick="onClickAbout" />
-
-        <Button
-            android:id="@+id/btnContact"
-            android:layout_width="100dp"
-            android:layout_height="55dp"
-            android:layout_below="@+id/welcomeMessage"
-            android:layout_toRightOf="@+id/btnAbout"
-            android:text="Contact Us"
-            android:onClick="onClickContact" />
 
 
     </RelativeLayout>

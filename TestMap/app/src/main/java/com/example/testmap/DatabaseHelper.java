@@ -59,7 +59,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public ArrayList getAllInfo(){
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<String> array_list = new ArrayList<String>();
-        Cursor res = db.rawQuery("select * from  " + CONTACTS_TABLE_NAME  + " WHERE aqi > 0", null);
+        Cursor res = db.rawQuery("select * from  " + CONTACTS_TABLE_NAME , null);
         res.moveToFirst();
 
         while(res.isAfterLast() == false){

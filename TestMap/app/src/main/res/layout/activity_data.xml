@@ -6,81 +6,85 @@
     android:layout_height="match_parent"
     tools:context=".DataActivity">
 
-    <TextView
-        android:layout_width=""
-        android:layout_height="" />
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:id="@+id/viewAllBtn"
+        android:text="View All"/>
     
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="350dp"
         android:layout_height="50dp"
+        android:layout_below="@+id/viewAllBtn"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"/>
 
 
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/nameField"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/aqi"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/gmt"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/lat"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/longitude"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/co"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/no2"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/o3"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
-        <TextView
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:id="@+id/so2"
-            android:layout_below="@+id/spinner"
-            android:layout_marginLeft="50dp"
-            android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/nameField"
+        android:layout_below="@+id/spinner"
+        android:text="Name: "
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/aqi"
+        android:layout_below="@+id/nameField"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/gmt"
+        android:text="GMT: "
+        android:layout_below="@+id/aqi"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/lat"
+        android:text="Latitude: "
+        android:layout_below="@+id/gmt"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/longitude"
+        android:text="Longitude"
+        android:layout_below="@+id/lat"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/co"
+        android:text="CO: "
+        android:layout_below="@+id/longitude"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/no2"
+        android:text="NO2: "
+        android:layout_below="@+id/co"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/o3"
+        android:text="O3: "
+        android:layout_below="@+id/no2"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:id="@+id/so2"
+        android:text="SO2: "
+        android:layout_below="@+id/o3"
+        android:layout_marginLeft="50dp"/>
 
 
 
