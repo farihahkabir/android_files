@@ -57,7 +57,7 @@ public class DataActivity extends AppCompatActivity {
 //        spinner.setOnItemClickListener(this);
 
         APIActivity getData = new APIActivity();
-        getData.execute("https://api.waqi.info/feed/" + cityMenu + "/?token=dde58930fe41788aa121c1a177000a9b49af7ed9");
+        getData.execute("https://api.waqi.info/feed/Beijing" + "/?token=dde58930fe41788aa121c1a177000a9b49af7ed9");
 
         final DatabaseHelper helper = new DatabaseHelper(this);
         final ArrayList array_list = helper.getAllInfo();

@@ -69,6 +69,15 @@ public class APIActivity extends AsyncTask<String, Void, String> {
 
             //Set displays
             DataActivity.aqi.setText("AQI: " + aqi);
+            DataActivity.name.setText("Name: " + name);
+            DataActivity.gmt.setText("GMT: " + gmt);
+            DataActivity.lat.setText("Latitude: " + lat);
+            DataActivity.longitude.setText("Longitude: " + longitude);
+            DataActivity.co.setText("Carbon Monoxide: " + vco);
+            DataActivity.no2.setText("NO2: " + vno2);
+            DataActivity.o3.setText("Ozone: " + vo3);
+            DataActivity.so2.setText("SO2: " + vso2);
+
         }catch (JSONException e){
             e.printStackTrace();
         }

@@ -36,6 +36,34 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         LatLng dhaka = new LatLng(23.797545, 90.410650);
         mMap.addMarker(new MarkerOptions().position(dhaka).title("Dhaka"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(dhaka, 5F));
+
+        LatLng beijing = new LatLng(39.9, 116.4);
+        mMap.addMarker(new MarkerOptions().position(beijing).title("Beijing"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(beijing, 5F));
+
+        LatLng bangkok = new LatLng(13.8, 100.5);
+        mMap.addMarker(new MarkerOptions().position(bangkok).title("Bangkok"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(bangkok, 5F));
+
+
+        LatLng london = new LatLng(51.5, 0.12);
+        mMap.addMarker(new MarkerOptions().position(london).title("London"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(london, 5F));
+
+
+        LatLng newyork = new LatLng(40.7, 74);
+        mMap.addMarker(new MarkerOptions().position(newyork).title("New York"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(newyork, 5F));
+
+
+        LatLng sydney = new LatLng(33.9, 151.2);
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Sydney"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 5F));
+
+
+        LatLng barcelona = new LatLng(41.3, 2.2);
+        mMap.addMarker(new MarkerOptions().position(barcelona).title("Barcelona"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(barcelona, 5F));
     }
 
     @Override
